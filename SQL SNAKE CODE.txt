@@ -1,0 +1,26 @@
+create database snake
+    with owner postgres;
+
+CREATE TABLE public.player_scores
+(
+    player_id   serial
+        primary key,
+    player_name varchar(50)         not null,
+    score       integer   default 0 not null,
+    high_score  integer   default 0 not null,
+    created_at  timestamp default CURRENT_TIMESTAMP
+);
+
+alter table public.player_scores
+    owner to postgres;
+
+INSERT INTO public.player_scores (player_id, player_name, score, high_score, created_at) VALUES (30, 'FGFG', 45, 45, '2025-01-09 13:55:33.435155');
+INSERT INTO public.player_scores (player_id, player_name, score, high_score, created_at) VALUES (36, 'Gogu', 34, 34, '2025-01-10 12:51:58.498179');
+INSERT INTO public.player_scores (player_id, player_name, score, high_score, created_at) VALUES (42, 'dffdf', 14, 14, '2025-01-10 17:36:14.177137');
+INSERT INTO public.player_scores (player_id, player_name, score, high_score, created_at) VALUES (13, 'GA', 11, 11, '2025-01-07 18:04:00.271488');
+INSERT INTO public.player_scores (player_id, player_name, score, high_score, created_at) VALUES (35, 'dfsfds', 1, 9, '2025-01-10 12:46:04.026969');
+INSERT INTO public.player_scores (player_id, player_name, score, high_score, created_at) VALUES (11, 'dsd', 5, 8, '2025-01-07 17:58:01.370833');
+INSERT INTO public.player_scores (player_id, player_name, score, high_score, created_at) VALUES (18, 'dsfds', 7, 7, '2025-01-07 18:24:54.450417');
+INSERT INTO public.player_scores (player_id, player_name, score, high_score, created_at) VALUES (7, 'dsadsas', 7, 7, '2025-01-07 17:49:39.758031');
+INSERT INTO public.player_scores (player_id, player_name, score, high_score, created_at) VALUES (22, 'NHGNGH', 6, 6, '2025-01-07 18:28:58.768954');
+INSERT INTO public.player_scores (player_id, player_name, score, high_score, created_at) VALUES (41, 'tyh', 5, 6, '2025-01-10 16:54:18.707727');
